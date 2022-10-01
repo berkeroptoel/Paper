@@ -1,0 +1,13 @@
+trig
+https://www.mathworks.com/help/fixedpoint/ug/calculate-fixed-point-sine-and-cosine.html
+
+
+sqrt
+https://ww2.mathworks.cn/help/fixedpoint/ug/compute-square-root-using-cordic.html
+
+
+atan
+https://www.mathworks.com/help/fixedpoint/ug/calculate-fixed-point-arctangent.html
+
+
+
