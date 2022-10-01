@@ -1,0 +1,25 @@
+## D/A çevirici
+Kart üzerinde TLV5627 vardır. 
+FPGA ile SPI haberleşmesi yaparak, çıkışındaki analog sinyali güncellemektedir. 
+TLV5627 20MHz’e kadar olan SPI clock sinyallerini desteklemektedir. 
+Çevirici 8bit büyüklüğünde dijital sinyalleri alır ve çıkış örnekleme frekansı 1Msps dır. 
+Yani çıkışındaki analog sinyalin örnekleme periyodu 1us dir. 
+Bu değerler limit değerleridir, daha düşük hızlarda da kullanılabilir. 
+Analog çıkış aralığı 0-5V dır. 
+Referans beslemesi olan 2.5V, entegre içerisinde 2 ile çarpılarak 5V skalasında çıkış vermesini sağlamaktadır. 
+Referans voltaj daha küçük verilerek 8bit çözünürlük için dinamik skala daha yüksek çözünürlük ile kullanılabilir. 
+4 kanal analog çıkış verebilmektedir, bu durumda her kanal çıkışı 250ksps örnekleme frekansına düşmektedir. 
+
+## A/D çevirici
+Kart üzerinde AD7928 vardır. 
+FPGA ile SPI haberleşmesi yaparak, girişindeki analog sinyali dijital’e çevirmektedir. 
+AD7928 20MHz’e kadar olan SPI clock sinyallerini desteklemektedir. 
+Çevirici 12bit büyüklüğünde dijital sinyalleri verir ve giriş örnekleme frekansı 1Msps dır. 
+Yani girişindeki analog sinyalin örnekleme periyodu 1us dir. 
+Bu değerler limit değerleridir, daha düşük hızlarda da kullanılabilir. 
+Referans beslemesi olan 2.5V, SPI üzerinden giriş voltaj aralığı seçilerek 0-2.5V veya 0-5V aralığında kullanılabilir. 
+8 kanal analog girişi vardır. 8 kanal kullanılması halinde her kanal 125ksps hızında örnekleme yapabilmektedir. 
+Giriş kanal entegre içerisindeki MUX ile seçilebileceği gibi, kanal sequencer ile otomatik sırayla da A/D çevrimi yaptırılabilir. 
+Çıkış kodlama: straight binary, twos complement, Giriş range: 0-2.5V veya 0-5V ve kanal seçimi SPI üzerinden yapılmaktadır. 
+
+notes
